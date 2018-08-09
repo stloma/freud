@@ -5,7 +5,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name='freud',
-    version='0.1.2',
+    version='0.1.3.dev0',
     author='Stephen Martin',
     author_email='lockwood@opperline.com',
     description='TUI REST client to analyze API endpoints',
