@@ -22,14 +22,18 @@ setup(
     ],
     keywords='cli tui http rest request api',
     packages=find_packages(),
-    install_requires=['requests', 'prompt_toolkit==2.0.3', 'pygments'],
+    install_requires=[
+        'requests==2.19.1',
+        'prompt_toolkit==2.0.3',
+        'pygments==2.2.0'
+    ],
     extras_require={
         'dev': [
-            'flake8',
-            'pytest',
-            'pytest_asyncio',
-            'pytest_httpbin',
-            'tox'
+            'flake8==3.5.0',
+            'pytest==3.7.1',
+            'pytest_asyncio==0.9.0',
+            'pytest_httpbin==0.3.0',
+            'tox==3.1.3'
         ]
     },
     entry_points={
