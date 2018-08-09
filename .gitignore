@@ -2,7 +2,7 @@
 *.egg-info
 *.db
 .venv/
-venv/
+.tox/
 .eggs/
 config/*.ini
 .pytest_cache

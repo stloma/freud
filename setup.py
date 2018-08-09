@@ -29,6 +29,7 @@ setup(
             'pytest',
             'pytest_asyncio',
             'pytest_httpbin',
+            'tox'
         ]
     },
     entry_points={
