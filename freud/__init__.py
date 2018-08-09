@@ -7,7 +7,7 @@ folder = 'config/'
 
 config_file = os.path.join(folder, 'freud.ini')
 
-__version__ = pkg_resources.get_distribution(__package__).version
+__version__ = pkg_resources.get_distribution('freud').version
 
 DEFAULT_SETTINGS = '''
 [LAYOUT]
