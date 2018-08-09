@@ -23,7 +23,14 @@ setup(
     keywords='cli tui http rest request api',
     packages=find_packages(),
     install_requires=['requests', 'prompt_toolkit==2.0.3', 'pygments'],
-    tests_require=['pytest', 'pytest_asyncio', 'pytest_httpbin'],
+    extras_require={
+        'dev': [
+            'flake8',
+            'pytest',
+            'pytest_asyncio',
+            'pytest_httpbin',
+        ]
+    },
     entry_points={
         'console_scripts': [
             'freud=freud.__main__:main',

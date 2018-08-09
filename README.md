@@ -95,6 +95,6 @@ can either submit a PR or create an issue and I'll add it!
 ## Testing
 
 ```
-python setup.py test
+python install -e '.[dev]'
 pytest
 ```
