@@ -10,16 +10,11 @@ responses, but more can be added later as needed.
 
 ## Installation
 
-> First, create an environment (_recommended_):
+> You can install through PyPI...
 
 ```shell
 python -m venv .venv
 . .venv/bin/activate
-```
-
-> Then you can either install through PyPI...
-
-```shell
 pip install freud
 ```
 
@@ -27,6 +22,9 @@ pip install freud
 
 ```
 git clone https://github.com/stloma/freud
+cd freud
+python -m venv .venv
+. .venv/bin/activate
 python setup.py install
 ```
 
