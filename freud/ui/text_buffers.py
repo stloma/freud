@@ -9,7 +9,7 @@ from prompt_toolkit.layout import HSplit
 from prompt_toolkit.widgets import SearchToolbar
 
 from pygments.lexer import RegexLexer, bygroups
-from pygments.token import Text, Keyword, String
+from pygments.token import Text, Keyword, String, Name
 
 from freud import HEADER_HEIGHT, SUMMARY_HEIGHT
 
@@ -25,20 +25,9 @@ class HeaderLexer(RegexLexer):
     tokens = {
         'root': [
             (r'(\[)(\')(\d+.*?)(\')(\] )(\| )(\d+.*?\n)',
-                bygroups(Keyword, None, String, None, Keyword, None, Text)),
+                bygroups(Keyword, None, Name, None, Keyword, None, Text)),
             (r'(\S+:\s)(.*?$)',
-                bygroups(String, Text))
-        ]
-    }
-
-
-class ResponseLexer(JsonLexer):
-    tokens = {
-        'root': [
-            (r'(.*?\: )(.*?[\[|\{|\n])',
-                bygroups(String, Text)),
-            (r'(\s*?[\}|\]])',
-                bygroups(Text)),
+                bygroups(Name, Text))
         ]
     }
 

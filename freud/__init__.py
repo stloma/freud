@@ -46,7 +46,7 @@ order = asc
 [STYLE]
 # More styles here:
 # https://bitbucket.org/birkenfeld/pygments-main/src/stable/pygments/styles
-theme = default
+theme = freud
 separator_line_fg = gray
 separator_line_bg = black
 '''

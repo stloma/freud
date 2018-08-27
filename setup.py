@@ -40,6 +40,9 @@ setup(
         'console_scripts': [
             'freud=freud.__main__:main',
         ],
+        'pygments.styles': [
+            'freud=freud.ui:FreudStyle'
+            ]
     },
     project_urls={
         'Bug Reports': 'https://github.com/stloma/freud/issues',
