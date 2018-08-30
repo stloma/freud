@@ -6,7 +6,7 @@ from freud.api.response import response_handler
 
 
 def session_builder(req):
-    s = requests.Session()
+    session = requests.Session()
     request = requests.Request(req.method, req.url)
 
     headers = {
@@ -33,13 +33,11 @@ def session_builder(req):
 
     if req.headers:
         headers = json.loads(req.headers)
-        headers = {k.lower(): v.lower() for k, v in headers.items()}
         request.headers.update(headers)
 
-    content_type = request.headers.get('content-type', None)
-
-    if content_type:
-        request.content_type = content_type
+        for header in request.headers:
+            if header.lower() == 'content-type':
+                request.content_type = request.headers[header]
 
     request.data = req.body
 
@@ -47,7 +45,7 @@ def session_builder(req):
     errors = None
 
     try:
-        response = s.send(request.prepare())
+        response = session.send(request.prepare())
 
     except requests.exceptions.ConnectionError as e:
         errors = {'Connection error': str(e)}
