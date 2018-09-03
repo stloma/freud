@@ -10,6 +10,10 @@ config_file = os.path.join(folder, 'freud.ini')
 __version__ = pkg_resources.get_distribution('freud').version
 
 DEFAULT_SETTINGS = '''
+[API]
+# Options: yes, no
+allow_redirects = yes
+
 [LAYOUT]
 # Width of sidebar that contains server names
 server_width = 15
@@ -65,6 +69,11 @@ config.read(config_file)
 if hasattr(sys, '_called_from_test'):
     config['DB']['filename'] = 'delete_freud_test_database.db'
 
+redirects = config['API']['allow_redirects']
+if redirects.lower() == 'no':
+    ALLOW_REDIRECTS = False
+else:
+    ALLOW_REDIRECTS = True
 
 KEYS = config['KEYS']
 

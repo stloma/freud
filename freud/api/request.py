@@ -3,6 +3,7 @@ import json
 
 from freud.model import db
 from freud.api.response import response_handler
+from freud import ALLOW_REDIRECTS
 
 
 def session_builder(req):
@@ -45,7 +46,8 @@ def session_builder(req):
     errors = None
 
     try:
-        response = session.send(request.prepare())
+        response = session.send(
+            request.prepare(), allow_redirects=ALLOW_REDIRECTS)
 
     except requests.exceptions.ConnectionError as e:
         errors = {'Connection error': str(e)}
