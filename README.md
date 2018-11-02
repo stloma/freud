@@ -93,6 +93,6 @@ can either submit a PR or create an issue and I'll add it!
 ## Testing
 
 ```
-python install -e '.[dev]'
+pip install -e '.[dev]'
 pytest
 ```
