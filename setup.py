@@ -24,7 +24,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         'requests==2.20.0',
-        'prompt_toolkit==2.0.6',
+        'prompt_toolkit==2.0.7',
         'pygments==2.2.0'
     ],
     extras_require={
