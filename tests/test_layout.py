@@ -120,7 +120,7 @@ class TestChangingLayout:
         assert len(floats) == 2
 
         # Simulate pressing the OK button in the delete confirmation dialog
-        windows[34].content.text()[1][2](SingleClick())
+        windows[37].content.text()[2][2](SingleClick())
 
         assert len(floats) == 1
 
@@ -154,7 +154,7 @@ class TestChangingLayout:
         assert len(root_container.floats) == 2
 
         windows = self._get_all_windows(layout)
-        windows[33].content.text()[1][2](SingleClick())
+        windows[36].content.text()[2][2](SingleClick())
 
         assert len(root_container.floats) == 1
 
