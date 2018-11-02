@@ -5,8 +5,8 @@ from pygments.styles import get_style_by_name
 from freud import STYLE
 
 theme = STYLE['theme']
-line_fg = STYLE['separator_line_fg']
-line_bg = STYLE['separator_line_bg']
+line_fg = STYLE.get('separator_line_fg', '')
+line_bg = STYLE.get('separator_line_bg', '')
 
 
 custom_style = [
