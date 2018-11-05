@@ -44,7 +44,7 @@ class ResponseBox:
             search_buffer_control=search_toolbar.control,
             buffer=response_buffer)
 
-        t = Window(
+        header_window = Window(
             wrap_lines=True,
             right_margins=right_margins,
             left_margins=left_margins,
@@ -55,7 +55,7 @@ class ResponseBox:
                 lexer=PygmentsLexer(HeaderLexer), buffer=header_buffer)
         )
 
-        w = Window(
+        body_window = Window(
             left_margins=left_margins,
             right_margins=right_margins,
             wrap_lines=True,
@@ -63,9 +63,9 @@ class ResponseBox:
         )
 
         return HSplit([
-            t,
+            header_window,
             Window(height=1, char='─', style='class:line'),
-            w,
+            body_window,
         ], key_bindings=response_kb)
 
 
