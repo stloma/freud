@@ -33,7 +33,7 @@ setup(
             'pytest==4.1.0',
             'pytest_asyncio==0.10.0',
             'pytest_httpbin==0.3.0',
-            'tox==3.5.3'
+            'tox==3.6.1'
         ]
     },
     entry_points={
