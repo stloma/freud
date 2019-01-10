@@ -23,7 +23,7 @@ setup(
     keywords='cli tui http rest request api',
     packages=find_packages(),
     install_requires=[
-        'requests==2.20.0',
+        'requests==2.21.0',
         'prompt_toolkit==2.0.7',
         'pygments==2.2.0'
     ],
