@@ -30,7 +30,7 @@ setup(
     extras_require={
         'dev': [
             'flake8==3.6.0',
-            'pytest==3.9.3',
+            'pytest==4.1.0',
             'pytest_asyncio==0.10.0',
             'pytest_httpbin==0.3.0',
             'tox==3.5.3'
