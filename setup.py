@@ -31,7 +31,7 @@ setup(
         'dev': [
             'flake8==3.6.0',
             'pytest==3.9.3',
-            'pytest_asyncio==0.9.0',
+            'pytest_asyncio==0.10.0',
             'pytest_httpbin==0.3.0',
             'tox==3.5.3'
         ]
