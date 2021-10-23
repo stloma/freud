@@ -5,7 +5,7 @@ from collections import namedtuple
 
 from freud import DB_FILE, SORT_BY
 
-basedir = os.path.abspath(os.path.dirname(__file__))
+basedir = 'config/'
 
 
 class Db:

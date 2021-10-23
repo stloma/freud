@@ -118,6 +118,7 @@ navigation_keys = {
 server_keys = {
     KEYS['send_request']: 'Send request',
     KEYS['new_server']: 'New server',
+    KEYS['duplicate_server']: 'Duplicate server',
     KEYS['edit_server']: 'Edit server',
     KEYS['edit_headers']: 'Edit headers',
     KEYS['edit_authentication']: 'Edit auth',

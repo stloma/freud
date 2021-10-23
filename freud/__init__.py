@@ -24,6 +24,7 @@ summary_height = 10
 
 [KEYS]
 new_server = n
+duplicate_server = D
 edit_server = e
 send_request = r
 edit_authentication = a

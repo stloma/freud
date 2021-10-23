@@ -4,7 +4,7 @@ from prompt_toolkit.filters import Condition
 from freud.server_control.delete_server import DeleteDialog
 from freud.server_control.headers_dialog import HeadersDialog
 from freud.server_control.server_dialog import ServerDialog
-from freud.utils import ButtonManager
+from freud.utils import ButtonManager, select_item
 from freud.ui.text_buffers import (
     response_buffer, header_buffer, summary_buffer)
 from freud.server_control.call_editor import (
@@ -13,6 +13,7 @@ from freud.server_control.auth_dialog import AuthSelector
 from freud.ui.keys import KeyQuickRef
 from freud.ui.sort import SortDialog
 from freud.api import send_request
+from freud.server_control import duplicate_server
 from freud import KEYS
 
 
@@ -140,6 +141,7 @@ def down_button(event):
         event.app.layout.focus(buttons[0])
         ButtonManager.prev_button = buttons[0]
 
+    select_item(event)
 
 @server_kb.add('k', filter=is_button)
 @server_kb.add('up')
@@ -160,6 +162,7 @@ def up_button(event):
         event.app.layout.focus(buttons[-1])
         ButtonManager.prev_button = buttons[-1]
 
+    select_item(event)
 
 # Server control keys
 #
@@ -207,3 +210,9 @@ def rm_server(event):
 @server_kb.add(KEYS['send_request'], filter=is_button)
 def request(event):
     send_request(event)
+
+
+@server_kb.add(KEYS['duplicate_server'], filter=is_button)
+def duplicate(event):
+    duplicate_server(event)
+
