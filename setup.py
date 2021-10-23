@@ -25,7 +25,7 @@ setup(
     install_requires=[
         'requests==2.21.0',
         'prompt_toolkit==2.0.7',
-        'pygments==2.2.0'
+        'pygments==2.7.4'
     ],
     extras_require={
         'dev': [

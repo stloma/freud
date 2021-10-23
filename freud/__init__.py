@@ -3,7 +3,7 @@ import os
 import sys
 import pkg_resources
 
-folder = 'config/'
+folder = os.path.join(os.environ["HOME"],'.config','freud')
 
 config_file = os.path.join(folder, 'freud.ini')
 
