@@ -110,6 +110,7 @@ def top_of_list(event):
 
     event.app.layout.focus(buttons[0])
     ButtonManager.prev_button = buttons[0]
+    select_item(event)
 
 
 @server_kb.add('G', filter=is_button)
@@ -120,6 +121,7 @@ def bottom_of_list(event):
 
     event.app.layout.focus(buttons[-1])
     ButtonManager.prev_button = buttons[-1]
+    select_item(event)
 
 
 @server_kb.add('j', filter=is_button)
