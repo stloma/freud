@@ -3,7 +3,7 @@ import os
 import sys
 import pkg_resources
 
-folder = 'config/'
+folder = os.path.join(os.environ["HOME"],'.config','freud')
 
 config_file = os.path.join(folder, 'freud.ini')
 
@@ -24,6 +24,7 @@ summary_height = 10
 
 [KEYS]
 new_server = n
+duplicate_server = D
 edit_server = e
 send_request = r
 edit_authentication = a

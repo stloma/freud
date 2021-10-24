@@ -5,8 +5,6 @@ from collections import namedtuple
 
 from freud import DB_FILE, SORT_BY
 
-basedir = os.path.abspath(os.path.dirname(__file__))
-
 
 class Db:
 
@@ -26,7 +24,7 @@ class Db:
     def connect(self):
 
         self.conn = sqlite3.connect(
-            os.path.join(basedir, self.database),
+            self.database,
             detect_types=sqlite3.PARSE_COLNAMES
         )
         self.conn.row_factory = self.namedtuple_factory
