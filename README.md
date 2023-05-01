@@ -1,4 +1,4 @@
-![Freud terminal gif](https://f002.backblazeb2.com/file/x7udzfe/freud_demo.gif)
+![Freud terminal gif](img/demo.gif)
 
 Freud is a TUI API endpoint analyzer utilizing Python Prompt Toolkit and
 Requests.  It allows creating and saving request headers, authentication (basic
